@@ -75,6 +75,6 @@ fetch_thread.start()
 if __name__ == '__main__':
     print("🚀 Starting JoyScroll - Positive Shorts Platform")
     # 🔧 Step 3: PORT support for Render + local dev
-    
+    port = int(os.environ.get("PORT", 5000)) 
     print(f"👉 Visit http://localhost:{port} or http://192.168.1.37:{port}")
     app.run(debug=False, host='0.0.0.0', port=port)  # ← port=port
