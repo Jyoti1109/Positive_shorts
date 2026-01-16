@@ -1,0 +1,15 @@
+version: 1
+services:
+  - type: web
+    name: positive-shorts
+    runtime: python
+    env:
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: PORT
+        value: 5000
