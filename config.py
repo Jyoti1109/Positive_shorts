@@ -7,6 +7,8 @@ load_dotenv()
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # ← ADD THIS LINE
 
+DATABASE_URL = os.getenv("DATABASE_URL")
+
 if not YOUTUBE_API_KEY:
     raise ValueError("❌ YOUTUBE_API_KEY missing in .env")
 if not GROQ_API_KEY:
